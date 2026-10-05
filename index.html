@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>STAY HARD — David Goggins</title>
+  <title>STAY HARD — Unai B.</title>
 
   <meta
     name="description"
@@ -66,6 +66,7 @@
       border: 1px solid rgba(225, 6, 0, 0.15);
       border-radius: 50%;
       animation: pulse 5s infinite ease-in-out;
+      z-index: 0;
     }
 
     header::after {
@@ -75,11 +76,66 @@
       height: 500px;
       border: 1px solid rgba(225, 6, 0, 0.1);
       border-radius: 50%;
+      z-index: 0;
+    }
+
+    /* =========================
+       UNAI B.
+    ========================= */
+
+    .brand {
+      position: absolute;
+      top: 28px;
+      left: 35px;
+      z-index: 10;
+
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       CRUZ ORTODOXA
+    ========================= */
+
+    .orthodox-cross {
+      position: absolute;
+      z-index: 1;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(300px, 45vw, 650px);
+      line-height: 1;
+
+      color: rgba(225, 6, 0, 0.055);
+
+      pointer-events: none;
+      user-select: none;
+
+      animation: crossPulse 7s infinite ease-in-out;
+    }
+
+    @keyframes crossPulse {
+      0%, 100% {
+        opacity: 0.55;
+        transform: translate(-50%, -50%) scale(0.97);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.03);
+      }
     }
 
     .hero {
       position: relative;
-      z-index: 2;
+      z-index: 5;
       max-width: 1000px;
     }
 
@@ -141,6 +197,7 @@
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
+      z-index: 5;
     }
 
     /* =========================
@@ -462,6 +519,7 @@
     ========================= */
 
     @media (max-width: 900px) {
+
       .quotes-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -469,9 +527,21 @@
       .principle-list {
         grid-template-columns: 1fr;
       }
+
     }
 
     @media (max-width: 600px) {
+
+      .brand {
+        top: 22px;
+        left: 20px;
+        font-size: 15px;
+      }
+
+      .orthodox-cross {
+        font-size: 300px;
+      }
+
       h1 {
         letter-spacing: -4px;
       }
@@ -499,6 +569,7 @@
       .final {
         min-height: 350px;
       }
+
     }
   </style>
 </head>
@@ -510,6 +581,16 @@
   ========================== -->
 
   <header>
+
+    <!-- Nombre -->
+    <div class="brand">
+      Unai B.
+    </div>
+
+    <!-- Cruz ortodoxa de fondo -->
+    <div class="orthodox-cross" aria-hidden="true">
+      ☦
+    </div>
 
     <div class="hero">
 
@@ -638,10 +719,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -660,10 +738,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -682,10 +757,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -704,10 +776,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -726,10 +795,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -748,10 +814,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -770,10 +833,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -792,10 +852,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -814,10 +871,7 @@
           <div class="quote-footer">
             <span class="author">Inspirado en Goggins</span>
 
-            <button
-              class="copy-button"
-              onclick="copyQuote(this)"
-            >
+            <button class="copy-button" onclick="copyQuote(this)">
               Copiar
             </button>
           </div>
@@ -1124,4 +1178,3 @@
 
 </body>
 </html>
-
