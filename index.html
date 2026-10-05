@@ -1,1 +1,1127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STAY HARD — David Goggins</title>
+
+  <meta
+    name="description"
+    content="Una recopilación de frases, ideas y principios inspirados en David Goggins sobre disciplina, resistencia y superación."
+  >
+
+  <style>
+    :root {
+      --bg: #080808;
+      --bg-card: #111111;
+      --bg-card-hover: #171717;
+      --white: #f5f5f5;
+      --gray: #999;
+      --dark-gray: #222;
+      --red: #e10600;
+      --red-light: #ff211a;
+      --border: #292929;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at center, #242424 0%, #0d0d0d 42%, #080808 75%);
+      padding: 40px 20px;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      border: 1px solid rgba(225, 6, 0, 0.15);
+      border-radius: 50%;
+      animation: pulse 5s infinite ease-in-out;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(225, 6, 0, 0.1);
+      border-radius: 50%;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-weight: 900;
+      letter-spacing: 5px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(60px, 13vw, 150px);
+      font-weight: 1000;
+      line-height: 0.85;
+      letter-spacing: -7px;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: var(--red);
+      display: block;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 35px auto 0;
+      color: #bdbdbd;
+      font-size: clamp(16px, 2vw, 20px);
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 16px 30px;
+      color: white;
+      background: var(--red);
+      text-decoration: none;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.25s;
+      border: 2px solid var(--red);
+    }
+
+    .hero-button:hover {
+      background: transparent;
+      color: var(--red);
+      transform: translateY(-3px);
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #666;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 25px;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title .number {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(35px, 6vw, 70px);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      max-width: 650px;
+      margin-top: 15px;
+    }
+
+    /* =========================
+       CONTROLS
+    ========================= */
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .filter {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: #aaa;
+      padding: 10px 18px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      transition: 0.2s;
+    }
+
+    .filter:hover,
+    .filter.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: white;
+    }
+
+    .search {
+      width: 100%;
+      background: #0d0d0d;
+      border: 1px solid var(--border);
+      color: white;
+      padding: 17px;
+      outline: none;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    .search:focus {
+      border-color: var(--red);
+    }
+
+    /* =========================
+       RANDOM QUOTE
+    ========================= */
+
+    .random-box {
+      background: linear-gradient(135deg, #161616, #0d0d0d);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--red);
+      padding: 35px;
+      margin-bottom: 55px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .random-box::after {
+      content: "“";
+      position: absolute;
+      right: 20px;
+      top: -40px;
+      font-size: 180px;
+      color: rgba(225, 6, 0, 0.08);
+      font-family: Georgia, serif;
+    }
+
+    .random-label {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    #randomQuote {
+      font-size: clamp(22px, 4vw, 38px);
+      font-weight: 900;
+      line-height: 1.2;
+      margin: 15px 0 25px;
+      max-width: 900px;
+    }
+
+    .random-button {
+      background: var(--red);
+      color: white;
+      border: 0;
+      padding: 13px 20px;
+      cursor: pointer;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .random-button:hover {
+      background: var(--red-light);
+    }
+
+    /* =========================
+       QUOTES GRID
+    ========================= */
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .quote-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 30px;
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.25s;
+    }
+
+    .quote-card:hover {
+      background: var(--bg-card-hover);
+      border-color: #444;
+      transform: translateY(-5px);
+    }
+
+    .quote-category {
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .quote-text {
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .quote-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      border-top: 1px solid var(--border);
+      padding-top: 17px;
+    }
+
+    .author {
+      color: #666;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .copy-button {
+      background: transparent;
+      border: 1px solid #333;
+      color: #aaa;
+      padding: 7px 10px;
+      cursor: pointer;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .copy-button:hover {
+      border-color: var(--red);
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* =========================
+       PRINCIPLES
+    ========================= */
+
+    .principles {
+      margin-top: 130px;
+    }
+
+    .principle-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .principle {
+      background: #0d0d0d;
+      padding: 35px;
+      display: flex;
+      gap: 25px;
+    }
+
+    .principle-number {
+      color: var(--red);
+      font-size: 28px;
+      font-weight: 900;
+      min-width: 45px;
+    }
+
+    .principle h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .principle p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .final {
+      margin-top: 130px;
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+        radial-gradient(circle, #3a0a08, #080808 65%);
+      border: 1px solid var(--border);
+      padding: 40px;
+    }
+
+    .final h2 {
+      font-size: clamp(45px, 9vw, 100px);
+      line-height: .9;
+      text-transform: uppercase;
+      font-weight: 1000;
+    }
+
+    .final h2 span {
+      color: var(--red);
+    }
+
+    .final p {
+      color: #888;
+      margin-top: 25px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(0.95);
+        opacity: 0.4;
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .quotes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .principle-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        letter-spacing: -4px;
+      }
+
+      main {
+        padding: 70px 18px;
+      }
+
+      .quotes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quote-card {
+        min-height: 230px;
+      }
+
+      .random-box {
+        padding: 25px;
+      }
+
+      .principle {
+        padding: 25px;
+      }
+
+      .final {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header>
+
+    <div class="hero">
+
+      <div class="eyebrow">
+        Mentalidad · Disciplina · Resistencia
+      </div>
+
+      <h1>
+        Stay
+        <span>Hard.</span>
+      </h1>
+
+      <p>
+        Una recopilación de frases e ideas inspiradas en la filosofía
+        de David Goggins sobre disciplina, incomodidad y superación personal.
+      </p>
+
+      <a href="#frases" class="hero-button">
+        Ver frases
+      </a>
+
+    </div>
+
+    <div class="scroll">
+      ↓ Desplázate
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         RANDOM
+    ========================== -->
+
+    <section>
+
+      <div class="random-box">
+
+        <div class="random-label">
+          Frase del momento
+        </div>
+
+        <div id="randomQuote">
+          La mente se fortalece cuando haces aquello que no quieres hacer.
+        </div>
+
+        <button class="random-button" onclick="randomQuote()">
+          Otra frase
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUOTES
+    ========================== -->
+
+    <section id="frases">
+
+      <div class="section-title">
+
+        <div class="number">
+          01 / RECOPILACIÓN
+        </div>
+
+        <h2>
+          Frases
+        </h2>
+
+        <p>
+          Ideas sobre disciplina, dolor, constancia, miedo y crecimiento.
+        </p>
+
+      </div>
+
+
+      <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="Buscar una frase..."
+        oninput="searchQuotes()"
+      >
+
+
+      <div class="controls">
+
+        <button class="filter active" onclick="filterQuotes('all', this)">
+          Todas
+        </button>
+
+        <button class="filter" onclick="filterQuotes('disciplina', this)">
+          Disciplina
+        </button>
+
+        <button class="filter" onclick="filterQuotes('mente', this)">
+          Mente
+        </button>
+
+        <button class="filter" onclick="filterQuotes('dolor', this)">
+          Dolor
+        </button>
+
+        <button class="filter" onclick="filterQuotes('superacion', this)">
+          Superación
+        </button>
+
+      </div>
+
+
+      <div class="quotes-grid" id="quotesGrid">
+
+        <article class="quote-card" data-category="disciplina">
+          <div>
+            <div class="quote-category">Disciplina</div>
+
+            <div class="quote-text">
+              “La disciplina empieza cuando desaparece la motivación.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="mente">
+          <div>
+            <div class="quote-category">Mente</div>
+
+            <div class="quote-text">
+              “Tu mente puede convertirse en tu mayor aliado o en tu mayor límite.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="superacion">
+          <div>
+            <div class="quote-category">Superación</div>
+
+            <div class="quote-text">
+              “Haz aquello que creías que estaba fuera de tu alcance.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="dolor">
+          <div>
+            <div class="quote-category">Dolor</div>
+
+            <div class="quote-text">
+              “La incomodidad puede convertirse en una herramienta de crecimiento.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="disciplina">
+          <div>
+            <div class="quote-category">Disciplina</div>
+
+            <div class="quote-text">
+              “No necesitas sentirte preparado para empezar.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="mente">
+          <div>
+            <div class="quote-category">Mente</div>
+
+            <div class="quote-text">
+              “La mayoría de tus límites empiezan en tu propia cabeza.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="superacion">
+          <div>
+            <div class="quote-category">Superación</div>
+
+            <div class="quote-text">
+              “No compares tu camino con el de otra persona.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="dolor">
+          <div>
+            <div class="quote-category">Dolor</div>
+
+            <div class="quote-text">
+              “Aprende a permanecer cuando todo dentro de ti quiere abandonar.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+
+        <article class="quote-card" data-category="disciplina">
+          <div>
+            <div class="quote-category">Disciplina</div>
+
+            <div class="quote-text">
+              “Haz el trabajo incluso cuando nadie esté mirando.”
+            </div>
+          </div>
+
+          <div class="quote-footer">
+            <span class="author">Inspirado en Goggins</span>
+
+            <button
+              class="copy-button"
+              onclick="copyQuote(this)"
+            >
+              Copiar
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRINCIPLES
+    ========================== -->
+
+    <section class="principles">
+
+      <div class="section-title">
+
+        <div class="number">
+          02 / FILOSOFÍA
+        </div>
+
+        <h2>
+          Mentalidad
+        </h2>
+
+        <p>
+          Algunos de los principios asociados a la filosofía de Goggins.
+        </p>
+
+      </div>
+
+
+      <div class="principle-list">
+
+        <div class="principle">
+
+          <div class="principle-number">
+            01
+          </div>
+
+          <div>
+            <h3>Hazte responsable</h3>
+
+            <p>
+              Deja de buscar excusas externas y empieza por aquello
+              que sí puedes controlar.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">
+            02
+          </div>
+
+          <div>
+            <h3>Abraza la incomodidad</h3>
+
+            <p>
+              El crecimiento normalmente empieza fuera de tu zona
+              de confort.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">
+            03
+          </div>
+
+          <div>
+            <h3>Construye disciplina</h3>
+
+            <p>
+              No dependas de estar motivado. Construye hábitos que
+              funcionen incluso cuando no tengas ganas.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">
+            04
+          </div>
+
+          <div>
+            <h3>Conoce tus límites</h3>
+
+            <p>
+              Aprende dónde están tus límites y trabaja progresivamente
+              para ampliar tus capacidades.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">
+            05
+          </div>
+
+          <div>
+            <h3>Haz el trabajo</h3>
+
+            <p>
+              Pensar, planificar y hablar ayudan. Pero el cambio llega
+              cuando ejecutas.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="principle-number">
+            06
+          </div>
+
+          <div>
+            <h3>Continúa</h3>
+
+            <p>
+              Cuando aparezca la tentación de abandonar, recuerda por
+              qué empezaste.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section class="final">
+
+      <div>
+
+        <h2>
+          No pares.<br>
+          <span>Stay Hard.</span>
+        </h2>
+
+        <p>
+          La constancia gana cuando la motivación desaparece.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      Proyecto personal · Inspirado en la filosofía de David Goggins
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    /* =========================
+       FRASES ALEATORIAS
+    ========================= */
+
+    const randomQuotes = [
+      "La mente se fortalece cuando haces aquello que no quieres hacer.",
+      "No necesitas sentirte preparado para empezar.",
+      "Haz el trabajo incluso cuando nadie esté mirando.",
+      "La incomodidad puede convertirse en una herramienta de crecimiento.",
+      "Tus límites pueden estar mucho más lejos de lo que imaginas.",
+      "La disciplina no depende de cómo te sientas.",
+      "Cuando quieras abandonar, recuerda por qué empezaste.",
+      "Deja de negociar con la parte de ti que quiere rendirse.",
+      "El crecimiento empieza cuando dejas de buscar comodidad.",
+      "Conviértete en alguien capaz de hacer lo difícil."
+    ];
+
+
+    function randomQuote() {
+
+      const quote =
+        randomQuotes[
+          Math.floor(Math.random() * randomQuotes.length)
+        ];
+
+      document.getElementById("randomQuote").textContent = quote;
+    }
+
+
+    /* =========================
+       FILTROS
+    ========================= */
+
+    function filterQuotes(category, button) {
+
+      const cards =
+        document.querySelectorAll(".quote-card");
+
+      const buttons =
+        document.querySelectorAll(".filter");
+
+      buttons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      cards.forEach(card => {
+
+        if (
+          category === "all" ||
+          card.dataset.category === category
+        ) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+
+      });
+
+      document.getElementById("search").value = "";
+    }
+
+
+    /* =========================
+       BUSCADOR
+    ========================= */
+
+    function searchQuotes() {
+
+      const search =
+        document
+          .getElementById("search")
+          .value
+          .toLowerCase();
+
+      const cards =
+        document.querySelectorAll(".quote-card");
+
+      cards.forEach(card => {
+
+        const text =
+          card.textContent.toLowerCase();
+
+        if (text.includes(search)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+
+      });
+
+    }
+
+
+    /* =========================
+       COPIAR FRASE
+    ========================= */
+
+    function copyQuote(button) {
+
+      const card =
+        button.closest(".quote-card");
+
+      const quote =
+        card.querySelector(".quote-text").textContent.trim();
+
+      navigator.clipboard.writeText(quote);
+
+      const originalText =
+        button.textContent;
+
+      button.textContent = "¡Copiado!";
+
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 1500);
+
+    }
+
+  </script>
+
+</body>
+</html>
 
